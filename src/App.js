@@ -243,7 +243,7 @@ function App() {
             </Col>
           </Row>
         </Container>
-        <p>V-1.0</p>
+        <p>V-2.0</p>
       </div>
     </div>
   );

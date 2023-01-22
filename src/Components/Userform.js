@@ -115,8 +115,9 @@ const Userform = ({ selectedUser, handleAdd, btnText }) => {
                     label="M"
                     name="gender"
                     type="radio"
-                    value={gender}
+                    value="M"
                     onChange={handleChange}
+                    checked={gender === "M"}
                     id="male"
                   />
                   <Form.Check
@@ -124,7 +125,8 @@ const Userform = ({ selectedUser, handleAdd, btnText }) => {
                     label="F"
                     name="gender"
                     type="radio"
-                    value={gender}
+                    value="F"
+                    checked={gender === "F"}
                     onChange={handleChange}
                     id="female"
                   />
