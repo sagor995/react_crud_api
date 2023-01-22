@@ -33,9 +33,13 @@ function App() {
 
   //Delete Operation
   const [showDelete, setShowDelete] = useState(false);
+  const [deleteUserId, setDeleteUserId] = useState("");
 
   const handleDeleteClose = () => setShowDelete(false);
-  const handleDeleteShow = () => setShowDelete(true);
+  const handleDeleteShow = (id) => {
+    setDeleteUserId(id);
+    setShowDelete(true);
+  };
 
   const getUsersData = () => {
     fetch(URL)
@@ -75,6 +79,7 @@ function App() {
   };
 
   const handleDelete = (id) => {
+    //console.log(id);
     fetch(URL + `${id}`, {
       method: "DELETE",
     })
@@ -90,7 +95,7 @@ function App() {
   };
 
   const addUserData = (user) => {
-    //console.log(user);
+    console.log(JSON.stringify(user));
     fetch(URL, {
       method: "POST",
       headers: {
@@ -101,12 +106,13 @@ function App() {
       .then((res) => {
         if (res.status === 201) {
           getUsersData();
-        } else {
-          throw new Error("Could not add new user data.");
         }
+        // else {
+        //   throw new Error("Could not add new user data.");
+        // }
       })
       .catch((err) => {
-        // console.log(err);
+        console.log(err);
         // console.log(err.message);
         setError(err.message);
       });
@@ -194,7 +200,9 @@ function App() {
                           {/* Delete Operation starts */}
                           <Button
                             variant="outline-danger"
-                            onClick={handleDeleteShow}
+                            onClick={() => {
+                              handleDeleteShow(id);
+                            }}
                           >
                             Delete
                           </Button>
@@ -216,7 +224,7 @@ function App() {
                               <Button
                                 variant="danger"
                                 onClick={() => {
-                                  handleDelete(id);
+                                  handleDelete(deleteUserId);
                                   handleDeleteClose();
                                 }}
                               >
