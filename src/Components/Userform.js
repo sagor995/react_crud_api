@@ -114,7 +114,7 @@ const Userform = ({ selectedUser, handleAdd, btnText }) => {
                     label="M"
                     name="gender"
                     type="radio"
-                    value="M"
+                    value={gender}
                     onChange={handleChange}
                     id="male"
                   />
@@ -123,7 +123,7 @@ const Userform = ({ selectedUser, handleAdd, btnText }) => {
                     label="F"
                     name="gender"
                     type="radio"
-                    value="F"
+                    value={gender}
                     onChange={handleChange}
                     id="female"
                   />
