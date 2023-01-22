@@ -38,6 +38,7 @@ const Userform = ({ selectedUser, handleAdd, btnText }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log("C-1" + user);
     handleAdd(user);
     // setUser({
     //   name: "",

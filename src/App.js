@@ -95,7 +95,7 @@ function App() {
   };
 
   const addUserData = (user) => {
-    console.log(user);
+    console.log("C-2" + user);
     fetch(URL, {
       method: "POST",
       headers: {
@@ -243,6 +243,7 @@ function App() {
             </Col>
           </Row>
         </Container>
+        <p>V-1.0</p>
       </div>
     </div>
   );
