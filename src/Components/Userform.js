@@ -40,13 +40,13 @@ const Userform = ({ selectedUser, handleAdd, btnText }) => {
     e.preventDefault();
     //console.log("C-1" + user);
     handleAdd(user);
-    // setUser({
-    //   name: "",
-    //   email: "",
-    //   age: "",
-    //   gender: "",
-    //   password: "",
-    // });
+    setUser({
+      name: "",
+      email: "",
+      age: "",
+      gender: "",
+      password: "",
+    });
   };
 
   return (
