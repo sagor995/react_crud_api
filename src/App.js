@@ -95,26 +95,26 @@ function App() {
   };
 
   const addUserData = (user) => {
-    console.log(JSON.stringify(user));
-    // fetch(URL, {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: JSON.stringify(user),
-    // })
-    //   .then((res) => {
-    //     if (res.status === 201) {
-    //       getUsersData();
-    //     } else {
-    //       throw new Error("Could not add new user data.");
-    //     }
-    //   })
-    //   .catch((err) => {
-    //     console.log(err);
-    //     console.log(err.message);
-    //     setError(err.message);
-    //   });
+    console.log(user);
+    fetch(URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(user),
+    })
+      .then((res) => {
+        if (res.status === 201) {
+          getUsersData();
+        } else {
+          throw new Error("Could not add new user data.");
+        }
+      })
+      .catch((err) => {
+        // console.log(err);
+        // console.log(err.message);
+        setError(err.message);
+      });
   };
 
   const editUserData = (user) => {
