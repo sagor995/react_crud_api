@@ -106,7 +106,7 @@ const Userform = ({ selectedUser, handleAdd, btnText }) => {
                 </FloatingLabel>
               </Form.Group>
 
-              {/* <Form.Group className="mb-3" controlId="formBasicAge">
+              <Form.Group className="mb-3" controlId="formBasicAge">
                 <Form.Label>Gender: </Form.Label>
                 <div className="mb-3">
                   <Form.Check
@@ -128,9 +128,9 @@ const Userform = ({ selectedUser, handleAdd, btnText }) => {
                     id="female"
                   />
                 </div>
-              </Form.Group> */}
+              </Form.Group>
 
-              <Form.Group className="mb-3">
+              {/* <Form.Group className="mb-3">
                 <Form.Label>Gender: </Form.Label>
                 <Form.Select
                   aria-label="Default select example"
@@ -150,7 +150,7 @@ const Userform = ({ selectedUser, handleAdd, btnText }) => {
                   <option value="M">Male</option>
                   <option value="F">Female</option>
                 </Form.Select>
-              </Form.Group>
+              </Form.Group> */}
 
               <Form.Group className="mb-3">
                 <FloatingLabel label="Password" className="mb-3">
