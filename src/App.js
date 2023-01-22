@@ -12,8 +12,8 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Modal from "react-bootstrap/Modal";
 
-const URL = "http://127.0.0.1:8000/api/crud/";
-//const URL = "https://sagor995.pythonanywhere.com/api/crud/";
+//const URL = "http://127.0.0.1:8000/api/crud/";
+const URL = "https://sagor995.pythonanywhere.com/api/crud/";
 
 function App() {
   const [users, setUsers] = useState();
