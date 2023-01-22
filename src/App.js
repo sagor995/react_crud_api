@@ -102,10 +102,12 @@ function App() {
         if (res.status === 201) {
           getUsersData();
         } else {
-          throw Error("Could not add new user data.");
+          throw new Error("Could not add new user data.");
         }
       })
       .catch((err) => {
+        // console.log(err);
+        // console.log(err.message);
         setError(err.message);
       });
   };
